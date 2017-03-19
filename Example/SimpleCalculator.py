@@ -87,49 +87,45 @@ class MainWindow() :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        numCheck = isNumber(num1) + isNumber(num2)
-        if 2 == numCheck :
-            entrySetText(self.result, str(int(num1) + int(num2)))
-        elif 2 < numCheck :
-            entrySetText(self.result, str(float(num1) + float(num2)))
-        else :
+        if isNumber(num1) == 0 or isNumber(num2) == 0 :
             entrySetText(self.result, "ERROR")
+        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
+            entrySetText(self.result, str(int(num1) + int(num2)))
+        else :
+            entrySetText(self.result, str(float(num1) + float(num2)))
     
     def sub(self) :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        numCheck = isNumber(num1) + isNumber(num2)
-        if 2 == numCheck :
-            entrySetText(self.result, str(int(num1) - int(num2)))
-        elif 2 < numCheck :
-            entrySetText(self.result, str(float(num1) - float(num2)))
-        else :
+        if isNumber(num1) == 0 or isNumber(num2) == 0 :
             entrySetText(self.result, "ERROR")
+        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
+            entrySetText(self.result, str(int(num1) - int(num2)))
+        else :
+            entrySetText(self.result, str(float(num1) - float(num2)))
         
     def mul(self) :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        numCheck = isNumber(num1) + isNumber(num2)
-        if 2 == numCheck :
-            entrySetText(self.result, str(int(num1) * int(num2)))
-        elif 2 < numCheck :
-            entrySetText(self.result, str(float(num1) * float(num2)))
-        else :
+        if isNumber(num1) == 0 or isNumber(num2) == 0 :
             entrySetText(self.result, "ERROR")
+        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
+            entrySetText(self.result, str(int(num1) * int(num2)))
+        else :
+            entrySetText(self.result, str(float(num1) * float(num2)))
         
     def div(self) :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        numCheck = isNumber(num1) + isNumber(num2)
-        if 2 == numCheck :
-            entrySetText(self.result, str(int(num1) / int(num2)))
-        elif 2 < numCheck :
-            entrySetText(self.result, str(float(num1) / float(num2)))
-        else :
+        if isNumber(num1) == 0 or isNumber(num2) == 0 :
             entrySetText(self.result, "ERROR")
+        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
+            entrySetText(self.result, str(int(num1) / int(num2)))
+        else :
+            entrySetText(self.result, str(float(num1) / float(num2)))
 
     def startMainLoop(self) :
         self.master.mainloop()
