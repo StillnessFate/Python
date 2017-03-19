@@ -1,6 +1,7 @@
 # Python
 Python을 공부하며 공유하는 공간입니다.   By 강민석
-test
+testtest
+
 
 Example : 다양한 예제 프로그램들을 만들고 공유합니다.
 
