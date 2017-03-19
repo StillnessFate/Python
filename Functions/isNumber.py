@@ -13,7 +13,7 @@
 def isNumber(str) :
     result=False
 
-    try:
+    try :
         float(str)
         result=2
         int(str)
