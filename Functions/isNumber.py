@@ -19,6 +19,6 @@ def isNumber(str) :
         int(str)
         result=1
     except :
-        None
+        pass
 
     return result
