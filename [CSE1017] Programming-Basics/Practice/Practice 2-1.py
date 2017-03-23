@@ -14,28 +14,28 @@
 # 작성자: 강민석
 # 작성날짜: 2017년 3월 16일 (version 1.0)
 
-def getScore() :
+def get_score() :
 	temp = input()
 	if temp.isdigit() :
 		return int(temp)
 	else :
 		return -1
 
-def printScoreAverage(scoreCount, totalScore, failedCount) :
+def print_score_average(scoreCount, totalScore, failedCount) :
 	print(scoreCount)
 	if 0 < scoreCount :
 		print(round(totalScore / scoreCount, 1))
 	if 0 < failedCount :
 		print(failedCount)
 
-def scoreAverage() :
+def score_average() :
 	scoreCount = 0
 	failedCount = 0
 	totalScore = 0
 	numTemp = 0
 	
 	while True :
-		numTemp = getScore()
+		numTemp = get_score()
 		if 0 < numTemp :
 			if 60 <= numTemp :
 				if numTemp <= 100 :
@@ -46,6 +46,6 @@ def scoreAverage() :
 		elif numTemp == 0 :
 			break
 	
-	printScoreAverage(scoreCount, totalScore, failedCount)
+	print_score_average(scoreCount, totalScore, failedCount)
 
-scoreAverage()
+score_average()

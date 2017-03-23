@@ -12,7 +12,7 @@
 # 작성자: 강민석
 # 작성날짜: 2017년 3월 16일 (version 1.0)
 
-def isLeapyear(year) :
+def is_leapyear(year) :
 	if (year % 400 == 0) or ((year % 4 == 0) and (year % 100 != 0)) :
 		return True
 	else :
@@ -20,10 +20,10 @@ def isLeapyear(year) :
 
 def main() :
 	leapyear = 0
+
 	year = int(input()) #No Exception Handling
-	
 	if 0 <= year :
-		leapyear = isLeapyear(year)
+		leapyear = is_leapyear(year)
 	
 	print(year, leapyear)
 
