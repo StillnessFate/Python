@@ -12,7 +12,6 @@
 
 def isNumber(str) :
     result=False
-
     try :
         float(str)
         result=2

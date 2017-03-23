@@ -15,7 +15,7 @@ class COORD(Structure):
     pass
 COORD._fields_ = [("X", c_short), ("Y", c_short)]
 
-def setConsoleCursorPosition(x, y) :
+def set_console_cursor_position(x, y) :
     STD_OUTPUT_HANDLE = -11
     stdHandle = windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 

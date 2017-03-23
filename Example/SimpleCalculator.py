@@ -6,14 +6,13 @@
 from tkinter import *
 from tkinter import ttk
 
-def entrySetText(entry, text) :
+def entry_set_text(entry, text) :
     entry.delete(0,END)
     entry.insert(0,text)
     return
 
-def isNumber(str) :
+def is_number(str) :
     result=False
-
     try:
         float(str)
         result=2
@@ -25,7 +24,7 @@ def isNumber(str) :
     return result
 
 def validate(action, text) :
-    if action == '0' or text == "." or text == "-" or text == "+" or 0 < isNumber(text):
+    if action == '0' or text == "." or text == "-" or text == "+" or 0 < is_number(text):
         return True
     else :
         return False
@@ -86,51 +85,51 @@ class MainWindow() :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        if isNumber(num1) == 0 or isNumber(num2) == 0 :
-            entrySetText(self.result, "ERROR")
-        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
-            entrySetText(self.result, str(int(num1) + int(num2)))
+        if is_number(num1) == 0 or is_number(num2) == 0 :
+            entry_set_text(self.result, "ERROR")
+        elif is_number(num1) == 1 and is_number(num2) == 1 :
+            entry_set_text(self.result, str(int(num1) + int(num2)))
         else :
-            entrySetText(self.result, str(float(num1) + float(num2)))
+            entry_set_text(self.result, str(float(num1) + float(num2)))
     
     def sub(self) :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        if isNumber(num1) == 0 or isNumber(num2) == 0 :
-            entrySetText(self.result, "ERROR")
-        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
-            entrySetText(self.result, str(int(num1) - int(num2)))
+        if is_number(num1) == 0 or is_number(num2) == 0 :
+            entry_set_text(self.result, "ERROR")
+        elif is_number(num1) == 1 and is_number(num2) == 1 :
+            entry_set_text(self.result, str(int(num1) - int(num2)))
         else :
-            entrySetText(self.result, str(float(num1) - float(num2)))
+            entry_set_text(self.result, str(float(num1) - float(num2)))
         
     def mul(self) :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        if isNumber(num1) == 0 or isNumber(num2) == 0 :
-            entrySetText(self.result, "ERROR")
-        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
-            entrySetText(self.result, str(int(num1) * int(num2)))
+        if is_number(num1) == 0 or is_number(num2) == 0 :
+            entry_set_text(self.result, "ERROR")
+        elif is_number(num1) == 1 and is_number(num2) == 1 :
+            entry_set_text(self.result, str(int(num1) * int(num2)))
         else :
-            entrySetText(self.result, str(float(num1) * float(num2)))
+            entry_set_text(self.result, str(float(num1) * float(num2)))
         
     def div(self) :
         num1 = self.num1.get()
         num2 = self.num2.get()
 
-        if isNumber(num1) == 0 or isNumber(num2) == 0 :
-            entrySetText(self.result, "ERROR")
-        elif isNumber(num1) == 1 and isNumber(num2) == 1 :
-            entrySetText(self.result, str(int(num1) / int(num2)))
+        if is_number(num1) == 0 or is_number(num2) == 0 :
+            entry_set_text(self.result, "ERROR")
+        elif is_number(num1) == 1 and is_number(num2) == 1 :
+            entry_set_text(self.result, str(int(num1) / int(num2)))
         else :
-            entrySetText(self.result, str(float(num1) / float(num2)))
+            entry_set_text(self.result, str(float(num1) / float(num2)))
 
-    def startMainLoop(self) :
+    def start_main_loop(self) :
         self.master.mainloop()
 
-    def getMaster(self) :
+    def get_master(self) :
         return self.master
 
 main = MainWindow()
-main.startMainLoop()
+main.start_main_loop()
