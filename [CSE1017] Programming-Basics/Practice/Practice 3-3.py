@@ -14,7 +14,7 @@
 
 import math
 
-def isNumber(str) :
+def is_number(str) :
 	result=False
 	try :
 		float(str)
@@ -30,7 +30,7 @@ def print_result(num, sqrt):
 	print(num, "의 제곱근은", sqrt, "입니다.")
 
 def check_float(x) :
-	checkNumber = isNumber(x)
+	checkNumber = is_number(x)
 	if 0 < checkNumber and x[0] != '+' and 0 <= float(x) :
 		return checkNumber
 	else :

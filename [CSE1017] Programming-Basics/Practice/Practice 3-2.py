@@ -11,7 +11,7 @@
 # 작성자: 강민석
 # 작성날짜: 2017년 3월 23일 (version 1.0)
 
-def isNumber(str) :
+def is_number(str) :
 	result=False
 	try :
 		float(str)
@@ -25,7 +25,7 @@ def isNumber(str) :
 
 def get_fixed_signed(message):
 	temp = input(message)
-	while not (0 < isNumber(temp)):
+	while not (0 < is_number(temp)):
 		temp = input(message)
 		
 	return float(temp)

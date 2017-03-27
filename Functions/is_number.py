@@ -10,7 +10,7 @@
 # 작성자: 강민석
 # 작성날짜: 2017년 3월 19일 (version 1.0)
 
-def isNumber(str) :
+def is_number(str) :
     result=False
     try :
         float(str)
