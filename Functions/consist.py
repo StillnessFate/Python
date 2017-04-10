@@ -20,3 +20,7 @@ def consist(str, elements) :
 # 방법 2
 def consist(str, elements) :
     return str.strip(elements) == ''
+
+# 방법 3
+def consist(str, elements) :
+    return set(str) - set(elements) == set()
