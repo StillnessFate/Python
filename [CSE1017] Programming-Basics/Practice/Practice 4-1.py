@@ -67,4 +67,4 @@ def gcd1_3(m, n) :
 
 print(gcd1_1(18, 48))
 print(gcd1_2(18, 48))
-print(gcd1_3(18, 48))	
+print(gcd1_3(18, 48))
