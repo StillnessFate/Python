@@ -2,9 +2,10 @@
 #
 # 인자: path - 정리할 파이썬 소스파일
 #       tabSize - 탭의 크기(공백 수)
+#       encodingType - 소스파일의 인코딩
 #
 # 1. 개인용 코드 자동 정리 프로그램
-# 2. 문법상 오류가 없는 코드만을 대상으로 할 것
+# 2. 문법상 오류가 코드만을 대상으로 할 것
 # 3. 정리된 소스파일은 <기존 파일명>_arrange 에 저장됨(확장자 포함)
 #
 # 작성자: 강민석
@@ -16,11 +17,11 @@
 	STATE_ANNOTATION,
 ) = range(3)
 
-def code_arrange(path, tabSize) :
-	f_in = open(path, 'r', encoding = 'UTF8')
+def code_arrange(path, tabSize, encodingType = 'UTF8') :
+	f_in = open(path, 'r', encoding = encodingType)
 	temp = path.rpartition('.')
 	outFileName = temp[0] + '_arrange' + temp[1] + temp[2]
-	f_out = open(outFileName, 'w')
+	f_out = open(outFileName, 'w', encoding = encodingType)
 
 	state = STATE_NORMAL
 	stringCharacter = ''
