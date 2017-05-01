@@ -121,7 +121,7 @@ def code_arrange(path, tabSize, encodingType = 'UTF8') :
 			if val != '\'' :
 				continuousApostrophe = 0
 
-		arrangedLine = arrangedLine.rstrip(' \n')
+		arrangedLine = arrangedLine.rstrip(' \r\n')
 		if arrangedLine != "" :
 			f_out.write('\n' * newLineStack)
 			f_out.write(arrangedLine)
