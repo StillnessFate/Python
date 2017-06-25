@@ -127,6 +127,7 @@ if engine.Propertys.OS == 'Darwin' :
     image_resize_mode = Image.NEAREST
 
 image_path = {
+    'icon': 'resources/images/icon.ico',
     'cards': 'resources/images/cards/',
     'deck': 'resources/images/deck.' + image_format,
     'back': 'resources/images/cards/back.' + image_format,
@@ -1444,6 +1445,7 @@ class LoginWindow() :
     def __init__(self) :
         self.__master = tkinter.Tk()
         self.master.title("Login")
+        self.master.iconbitmap(image_path['icon'])
         self.window_size = "470x250"
         if engine.Propertys.OS == 'Darwin' :
             self.window_size = "532x265"
@@ -1554,6 +1556,7 @@ def main() :
 
     window = engine.MainWindow()
     window.set_title("BackJack")
+    window.master.iconbitmap(image_path['icon'])
     window.master.config(cursor="none")
 
     objectManager = engine.ObjectManager()
